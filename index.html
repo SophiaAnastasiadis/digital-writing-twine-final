@@ -50,6 +50,26 @@ a.enchantment-link {
 tw-link span,
 .enchantment-link span {
   color: #A020F0 !important;
+}
+
+.story-room {
+  display: grid;  /* sets the display to grid on the surrounding div */
+  grid-template-columns: 50% 50%;  /* sets each column to 50% */
+}
+.story-text {
+  grid-column: 2;  /* sets which column the text appears in */
+  grid-row: 2;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.story-image {
+  grid-column: 3;  /* sets which column the image appears in */
+  grid-row: 3;
+}
+.story-image img {
+max-width: 100%;
+height: auto;
+display: block;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="This is a test" tags="" position="600,275" size="100,100">(text-colour:#ffffff) [Hello. You are being tested. You have [[four seconds]] before this site self-destructs.]
 
 &lt;audio src=&quot;./audio/background.mp3&quot; autoplay loop&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="2" name="four seconds" tags="" position="600,400" size="100,100">[[three seconds]]</tw-passagedata><tw-passagedata pid="3" name="three seconds" tags="" position="600,525" size="100,100">Wait, maybe you have more time than I thought?
@@ -74,7 +94,8 @@ This is yet another line.]
 
 (t8n-delay: 5s) + (t8n: &quot;fade-down&quot;) [god i&#39;m dumb]
 
-[[&lt;img class=&quot;story-image&quot; src=&quot;./images/71+2ckL0a7L.jpg&quot; alt=&quot;an example&quot; /&gt;-&gt; Another room]]</tw-passagedata><tw-passagedata pid="5" name=" Another room" tags="" position="600,775" size="100,100">wowwwwww you really love Betty Boop, huh.</tw-passagedata></tw-storydata>
+[[&lt;img class=&quot;story-image&quot; src=&quot;./images/71+2ckL0a7L.jpg&quot; alt=&quot;an example&quot; /&gt;-&gt; Another room]]</tw-passagedata><tw-passagedata pid="5" name=" Another room" tags="" position="600,775" size="100,100">wowwwwww you really love Betty Boop, [[huh]].</tw-passagedata><tw-passagedata pid="6" name="huh" tags="" position="600,900" size="100,100">
+&lt;div class=&quot;story-room&quot;&gt;&lt;div class=&quot;story-text&quot;&gt;This is example text.&lt;/div&gt;&lt;div class=&quot;story-image&quot;&gt;&lt;img src=&quot;./images/Screenshot 2024-03-20 at 3.03.19 pm&quot; alt=&quot;an example&quot; /&gt;&lt;/div&gt;&lt;/div&gt;</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
